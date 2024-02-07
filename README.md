@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/title.png" alt="Feed for Node.js" width="326">
+  <img src="https://user-images.githubusercontent.com/1114325/60746552-2c059a00-9f77-11e9-9632-e21dea9dd06b.png" alt="Feed for Node.js" width="326">
   <br>
   <a href="https://travis-ci.org/jpmonette/feed"><img src="https://travis-ci.org/jpmonette/feed.svg?branch=master" alt="Build Status"></a> <a href='https://coveralls.io/github/jpmonette/feed?branch=master'><img src='https://coveralls.io/repos/github/jpmonette/feed/badge.svg?branch=master' alt='Coverage Status' /></a> <a href="https://badge.fury.io/js/feed"><img src="https://badge.fury.io/js/feed.svg" alt="npm version" height="18"></a> <a href="https://github.com/facebook/jest"><img src="https://img.shields.io/badge/tested_with-jest-99424f.svg" alt="Tested with Jest"></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
 </p>
@@ -32,6 +32,7 @@ const feed = new Feed({
   description: "This is my personal feed!",
   id: "http://example.com/",
   link: "http://example.com/",
+  language: "en", // optional, used only in RSS 2.0, possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
   image: "http://example.com/image.png",
   favicon: "http://example.com/favicon.ico",
   copyright: "All rights reserved 2013, John Doe",
@@ -109,7 +110,7 @@ If you are migrating from a version older than `3.0.0`, be sure to update your i
 If your environment supports the ES6 module syntax, you can `import` as described above:
 
 ```ts
-import { Feed } from 'feed';
+import { Feed } from "feed";
 ```
 
 Otherwise, you can stick with `require()`:
@@ -118,7 +119,6 @@ Otherwise, you can stick with `require()`:
 - const Feed = require('feed');
 + const Feed = require('feed').Feed;
 ```
-
 
 ## More Information
 
